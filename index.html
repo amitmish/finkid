@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<body dir = "rtl">
+<select id = "times">
+<option value=1>פעולה אחת</option>
+<option value=2>שתי פעולות</option>
+<option value=3>שלוש פעולות</option>
+<option value=4>ארבע פעולות</option>
+</select>
+<button onclick="aa()">click</button>
+<h1 id="h1"></h1>
+<p id = "p"></p>
+<script>
+function aa()
+{
+var times = document.getElementById("times").value;
+for (i = 1; i <= times; i++)
+{
+var select = prompt("פקודה לתכנות");
+var text = prompt("הכנס טקסט");
+if (select == "כתוב")
+{
+document.getElementById("p").innerHTML = text;
+}
+else if (select == "הודעה")
+{
+alert(text);
+}
+else if (select == "קלוט וכתוב")
+{
+var x = prompt(text);
+document.getElementById("p").innerHTML = x;
+}
+else if (select == "כותרת")
+{
+document.getElementById("h1").innerHTML = text;
+}
+}
+}
+</script>
+</body>
+
+</html>
