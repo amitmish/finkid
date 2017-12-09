@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
-
+<head>
+<style>
+.site
+{
+width: 1000px;
+height: 1000px;
+}
+</style>
+</head>
 <body dir = "rtl">
   <h3>פקודות:</h3>
   <pre>
@@ -16,8 +24,10 @@
 <option value=4>ארבע פעולות</option>
 </select>
 <button onclick="aa()">click</button>
+<div id="site" class="site">
 <h1 id="h1"></h1>
 <p id = "p"></p>
+</div>
 <script>
 function aa()
 {
@@ -42,6 +52,22 @@ document.getElementById("p").innerHTML = x;
 else if (select == "כותרת")
 {
 document.getElementById("h1").innerHTML = text;
+}
+else if (select == "רקע")
+{
+if (text=="אדום")
+{
+text = "red";
+}
+else if (text=="כחול")
+{
+text = "blue";
+}
+else if (text=="צהוב")
+{
+text = "yellow";
+}
+document.getElementById("site").style.backgroundColor = text;
 }
 }
 }
